@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+class BankAccount {
+private:
+    int accountNumber;
+    double balance;
+
+public:
+    BankAccount(int accNo, double bal) {
+        accountNumber = accNo;
+        balance = bal;
+        cout << "Account created!\n";
+    }
+
+    ~BankAccount() {
+        cout << "Account destroyed!\n";
+    }
+
+    void display() {
+        cout << "Account Number: " << accountNumber << endl;
+        cout << "Balance: " << balance << endl;
+    }
+};
+
+int main() {
+    BankAccount acc(12345, 5000.50);
+    acc.display();
+    return 0;
+}
