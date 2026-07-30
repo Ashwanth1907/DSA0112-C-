@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+class Rectangle {
+private:
+    double length, width;
+
+public:
+    Rectangle(double l, double w) {
+        length = l;
+        width = w;
+        cout << "Constructor called!" << endl;
+    }
+
+    ~Rectangle() {
+        cout << "Destructor called!" << endl;
+    }
+
+    double area() {
+        return length * width;
+    }
+};
+
+int main() {
+    double l, w;
+    cout << "Enter length and width: ";
+    cin >> l >> w;
+
+    Rectangle r(l, w);
+
+    cout << "Area = " << r.area() << endl;
+
+    return 0;
+}
