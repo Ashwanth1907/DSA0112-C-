@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Book {
+private:
+    string title;
+    string author;
+    float price;
+
+public:
+    Book(string t, string a, float p) {
+        title = t;
+        author = a;
+        price = p;
+        cout << "Book constructor called for: " << title << endl;
+    }
+
+    void display() {
+        cout << "\nBook Details:" << endl;
+        cout << "Title: " << title << endl;
+        cout << "Author: " << author << endl;
+        cout << "Price: " << price << endl;
+    }
+
+    ~Book() {
+        cout << "\nBook destructor called for: " << title << endl;
+    }
+};
